@@ -6,9 +6,11 @@
     <%= product.descrption %>
     <strong>Price:</strong>
     <%= product.price %>
+    <strong>ID:</strong>
+    <%= product.id %>
 
     <%= form_with(url: cart_add_path) do |f| %>
-      <%= f.hidden_field :id, vaule: product.id %>
+      <%= f.hidden_field :id, value: product.id %>
       <%= f.number_field :quantity, vaule: 0, min:1 %>
       <%= f.submit "Add to Cart" %>
     <% end %>
