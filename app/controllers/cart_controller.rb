@@ -22,6 +22,7 @@ class CartController < ApplicationController
     #                           turbo_stream.replace(@product)]
     #   end
     # end
+    redirect_to @cart, notice: "Producto agregado a carrito"
   end
 
   def remove
@@ -33,5 +34,6 @@ class CartController < ApplicationController
     #                                               locals: { cart: @cart })
     #   end
     # end
+    redirect_to @cart, notice: "Producto eliminado del carrito"
   end
 end
